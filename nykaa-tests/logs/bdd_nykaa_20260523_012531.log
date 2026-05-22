@@ -1,0 +1,173 @@
+2026-05-23 01:25:31,197 | INFO    | === Scenario: Step 1 - Navigate to lipstick listing page ===
+2026-05-23 01:25:35,605 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:25:35,606 | INFO    | >>> Given: On Nykaa homepage
+2026-05-23 01:25:35,607 | INFO    | >>> When: Hover Makeup and click Lipstick
+2026-05-23 01:25:37,340 | INFO    |   ACTION: Hovered Makeup and clicked Lipstick
+2026-05-23 01:25:39,039 | INFO    |   ACTION: Listing heading: 'Buy Lipstick Online (713)'
+2026-05-23 01:25:39,039 | INFO    |   ASSERT: Heading contains 'Lipstick'
+2026-05-23 01:25:39,511 | INFO    | === Scenario PASSED: Step 1 - Navigate to lipstick listing page ===
+2026-05-23 01:25:39,578 | INFO    |   ACTION: Browser closed
+2026-05-23 01:25:39,580 | INFO    | === Scenario: Step 2 - Verify products are displayed on listing ===
+2026-05-23 01:25:44,007 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:25:44,008 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:25:45,672 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:25:46,910 | INFO    |   ACTION: Product count: 20
+2026-05-23 01:25:46,910 | INFO    |   ASSERT: Product count > 0
+2026-05-23 01:25:47,578 | INFO    | === Scenario PASSED: Step 2 - Verify products are displayed on listing ===
+2026-05-23 01:25:47,638 | INFO    |   ACTION: Browser closed
+2026-05-23 01:25:47,640 | INFO    | === Scenario: Step 3 - Filter products by brand Lakme ===
+2026-05-23 01:25:52,182 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:25:52,183 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:25:53,869 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:25:53,869 | INFO    | >>> When: Filter by brand 'Lakme'
+2026-05-23 01:26:11,374 | INFO    |   ACTION: Applied 'Lakme' brand filter
+2026-05-23 01:26:14,548 | INFO    |   ASSERT: URL has brand param: https://www.nykaa.com/makeup/lips/lipstick/c/249?brand=Lakme&root=nav_4
+2026-05-23 01:26:15,109 | INFO    | === Scenario PASSED: Step 3 - Filter products by brand Lakme ===
+2026-05-23 01:26:15,179 | INFO    |   ACTION: Browser closed
+2026-05-23 01:26:15,182 | INFO    | === Scenario: Step 4 - Filter products by brand Maybelline ===
+2026-05-23 01:26:20,170 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:26:20,171 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:26:21,851 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:26:21,851 | INFO    | >>> When: Filter by brand 'Maybelline'
+2026-05-23 01:26:39,402 | INFO    |   ACTION: Applied 'Maybelline' brand filter
+2026-05-23 01:26:42,566 | INFO    |   ASSERT: URL has brand param: https://www.nykaa.com/makeup/lips/lipstick/c/249?brand=Maybelline&root=nav_4
+2026-05-23 01:26:43,086 | INFO    | === Scenario PASSED: Step 4 - Filter products by brand Maybelline ===
+2026-05-23 01:26:43,152 | INFO    |   ACTION: Browser closed
+2026-05-23 01:26:43,154 | INFO    | === Scenario: Step 5 - Sort products by Price Low to High ===
+2026-05-23 01:26:47,699 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:26:47,700 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:26:49,265 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:26:49,266 | INFO    | >>> When: Sort by 'Low to High'
+2026-05-23 01:27:06,958 | INFO    |   ACTION: Selected Low to High sort
+2026-05-23 01:27:10,101 | INFO    |   ACTION: Heading after sort: 'Buy Lipstick Online (711)'
+2026-05-23 01:27:10,101 | INFO    |   ASSERT: Still on lipstick page
+2026-05-23 01:27:10,554 | INFO    | === Scenario PASSED: Step 5 - Sort products by Price Low to High ===
+2026-05-23 01:27:10,617 | INFO    |   ACTION: Browser closed
+2026-05-23 01:27:10,619 | INFO    | === Scenario: Step 6 - Verify sort parameter in URL ===
+2026-05-23 01:27:15,363 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:27:15,364 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:27:17,086 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:27:17,086 | INFO    | >>> When: Sort by 'Low to High'
+2026-05-23 01:27:34,485 | INFO    |   ACTION: Selected Low to High sort
+2026-05-23 01:27:37,510 | INFO    |   ASSERT: URL has sort param: https://www.nykaa.com/makeup/lips/lipstick/c/249?sort=price_asc
+2026-05-23 01:27:38,022 | INFO    | === Scenario PASSED: Step 6 - Verify sort parameter in URL ===
+2026-05-23 01:27:38,090 | INFO    |   ACTION: Browser closed
+2026-05-23 01:27:38,092 | INFO    | === Scenario: Step 7 - Verify product name on PDP ===
+2026-05-23 01:27:42,566 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:27:42,568 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:27:44,284 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:27:44,284 | INFO    | >>> When: Click first product
+2026-05-23 01:27:46,353 | INFO    |   ACTION: Clicked first product link
+2026-05-23 01:27:46,354 | INFO    | >>> When: Switch to PDP tab
+2026-05-23 01:27:46,368 | INFO    |   ACTION: Switched to new PDP tab
+2026-05-23 01:27:47,543 | INFO    |   ACTION: Product name: 'Charlotte Tilbury Matte Revolution - Pillow Talk Medium
+(3.5g)'
+2026-05-23 01:27:47,543 | INFO    |   ASSERT: Product name is not empty
+2026-05-23 01:27:48,137 | INFO    | === Scenario PASSED: Step 7 - Verify product name on PDP ===
+2026-05-23 01:27:48,199 | INFO    |   ACTION: Browser closed
+2026-05-23 01:27:48,201 | INFO    | === Scenario: Step 8 - Verify product price on PDP ===
+2026-05-23 01:27:53,471 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:27:53,472 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:28:11,013 | INFO    | === Scenario PASSED: Step 8 - Verify product price on PDP ===
+2026-05-23 01:28:11,075 | INFO    |   ACTION: Browser closed
+2026-05-23 01:28:11,078 | INFO    | === Scenario: Step 9 - Add product to bag ===
+2026-05-23 01:28:15,614 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:28:15,615 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:28:17,348 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:28:17,348 | INFO    | >>> When: Click first product
+2026-05-23 01:28:19,296 | INFO    |   ACTION: Clicked first product link
+2026-05-23 01:28:19,296 | INFO    | >>> When: Switch to PDP tab
+2026-05-23 01:28:19,314 | INFO    |   ACTION: Switched to new PDP tab
+2026-05-23 01:28:19,315 | INFO    | >>> When: Add to bag
+2026-05-23 01:28:21,341 | INFO    |   ACTION: Clicked Add to Bag
+2026-05-23 01:28:23,342 | INFO    |   ASSERT: Add to Bag clicked successfully
+2026-05-23 01:28:23,782 | INFO    | === Scenario PASSED: Step 9 - Add product to bag ===
+2026-05-23 01:28:23,864 | INFO    |   ACTION: Browser closed
+2026-05-23 01:28:23,867 | INFO    | === Scenario: Step 10 - Navigate to bag page ===
+2026-05-23 01:28:28,365 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:28:28,366 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:28:30,011 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:28:30,011 | INFO    | >>> When: Add first product to bag
+2026-05-23 01:28:31,621 | INFO    |   ACTION: Clicked first product
+2026-05-23 01:28:31,636 | INFO    |   ACTION: Switched to PDP tab
+2026-05-23 01:28:33,122 | INFO    |   ACTION: Product: 'Charlotte Tilbury Matte Revolution - Pillow Talk Medium
+(3.5g)' - Price ₹3650.
+2026-05-23 01:28:33,593 | INFO    |   ACTION: Clicked Add to Bag
+2026-05-23 01:28:34,594 | INFO    | >>> When: Go to bag page
+2026-05-23 01:28:50,281 | INFO    |   ACTION: Navigated to bag
+2026-05-23 01:28:52,286 | INFO    |   ASSERT: Bag page URL: https://www.nykaa.com/checkout/cart
+2026-05-23 01:28:52,387 | INFO    | === Scenario PASSED: Step 10 - Navigate to bag page ===
+2026-05-23 01:28:52,455 | INFO    |   ACTION: Browser closed
+2026-05-23 01:28:52,456 | INFO    | === Scenario: Step 11 - Search for lipstick ===
+2026-05-23 01:28:56,829 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:28:56,830 | INFO    | >>> Given: On Nykaa homepage
+2026-05-23 01:28:56,831 | INFO    | >>> When: Search for 'lipstick'
+2026-05-23 01:28:58,614 | INFO    |   ACTION: Submitted search query 'lipstick'
+2026-05-23 01:29:01,635 | INFO    |   ASSERT: Search URL: https://www.nykaa.com/makeup/lips/c/15?search_redirection=True
+2026-05-23 01:29:02,381 | INFO    | === Scenario PASSED: Step 11 - Search for lipstick ===
+2026-05-23 01:29:02,442 | INFO    |   ACTION: Browser closed
+2026-05-23 01:29:02,444 | INFO    | === Scenario: Step 12 - Search special characters should not crash ===
+2026-05-23 01:29:06,857 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:29:06,858 | INFO    | >>> Given: On Nykaa homepage
+2026-05-23 01:29:06,859 | INFO    | >>> When: Search for '!@#$%'
+2026-05-23 01:29:07,992 | INFO    |   ACTION: Submitted search query '!@#$%'
+2026-05-23 01:29:10,992 | INFO    | >>> Then: Page loaded without errors
+2026-05-23 01:29:11,002 | INFO    |   ACTION: Page body loaded
+2026-05-23 01:29:11,005 | INFO    |   ASSERT: Title: 'Buy Cosmetics Products & Beauty Products Online in India at Best Price | Nykaa'
+2026-05-23 01:29:11,151 | INFO    | === Scenario PASSED: Step 12 - Search special characters should not crash ===
+2026-05-23 01:29:11,210 | INFO    |   ACTION: Browser closed
+2026-05-23 01:29:11,212 | INFO    | === Scenario: Step 13 - Search results page renders ===
+2026-05-23 01:29:16,214 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:29:16,214 | INFO    | >>> Given: On Nykaa homepage
+2026-05-23 01:29:16,215 | INFO    | >>> When: Search for 'lipstick'
+2026-05-23 01:29:18,026 | INFO    |   ACTION: Submitted search query 'lipstick'
+2026-05-23 01:29:21,058 | INFO    |   ASSERT: Search results body is visible
+2026-05-23 01:29:21,337 | INFO    |   ASSERT: URL: https://www.nykaa.com/makeup/lips/c/15?search_redirection=True
+2026-05-23 01:29:22,033 | INFO    | === Scenario PASSED: Step 13 - Search results page renders ===
+2026-05-23 01:29:22,095 | INFO    |   ACTION: Browser closed
+2026-05-23 01:29:22,097 | INFO    | === Scenario: Filter by brand Lakme ===
+2026-05-23 01:29:26,658 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:29:26,658 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:29:28,354 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:29:28,355 | INFO    | >>> When: Filter by brand 'Lakme'
+2026-05-23 01:29:46,188 | INFO    |   ACTION: Applied 'Lakme' brand filter
+2026-05-23 01:29:49,338 | INFO    |   ASSERT: Filtered URL: https://www.nykaa.com/makeup/lips/lipstick/c/249?brand=Lakme&root=nav_4
+2026-05-23 01:29:49,856 | INFO    | === Scenario PASSED: Filter by brand Lakme ===
+2026-05-23 01:29:49,923 | INFO    |   ACTION: Browser closed
+2026-05-23 01:29:49,926 | INFO    | === Scenario: Hover Makeup and click Lipstick navigates to lipstick listing ===
+2026-05-23 01:29:54,308 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:29:54,309 | INFO    | >>> Given: On Nykaa homepage
+2026-05-23 01:29:54,310 | INFO    | >>> When: Hover Makeup and click Lipstick
+2026-05-23 01:29:55,966 | INFO    |   ACTION: Hovered Makeup and clicked Lipstick
+2026-05-23 01:29:57,624 | INFO    |   ACTION: Listing heading: 'Buy Lipstick Online (713)'
+2026-05-23 01:29:57,624 | INFO    |   ASSERT: Heading contains 'Lipstick'
+2026-05-23 01:29:58,087 | INFO    | === Scenario PASSED: Hover Makeup and click Lipstick navigates to lipstick listing ===
+2026-05-23 01:29:58,154 | INFO    |   ACTION: Browser closed
+2026-05-23 01:29:58,157 | INFO    | === Scenario: Product detail page displays name and price ===
+2026-05-23 01:30:02,677 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:30:02,678 | INFO    | >>> Given: Navigate to lipstick listing
+2026-05-23 01:30:04,396 | INFO    |   ACTION: Landed on lipstick listing page
+2026-05-23 01:30:04,396 | INFO    | >>> When: Click first product
+2026-05-23 01:30:06,531 | INFO    |   ACTION: Clicked first product link
+2026-05-23 01:30:06,532 | INFO    | >>> When: Switch to PDP tab
+2026-05-23 01:30:06,548 | INFO    |   ACTION: Switched to new PDP tab
+2026-05-23 01:30:08,570 | INFO    |   ACTION: Product name: 'Charlotte Tilbury Matte Revolution - Pillow Talk Medium
+(3.5g)'
+2026-05-23 01:30:08,570 | INFO    |   ASSERT: Product name is not empty
+2026-05-23 01:30:08,751 | INFO    |   ACTION: Product price: 'Price ₹3650.'
+2026-05-23 01:30:08,751 | INFO    |   ASSERT: Product price is not empty
+2026-05-23 01:30:09,229 | INFO    | === Scenario PASSED: Product detail page displays name and price ===
+2026-05-23 01:30:09,300 | INFO    |   ACTION: Browser closed
+2026-05-23 01:30:09,303 | INFO    | === Scenario: Search with special characters does not crash ===
+2026-05-23 01:30:13,946 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:30:13,947 | INFO    | >>> Given: On Nykaa homepage
+2026-05-23 01:30:13,948 | INFO    | >>> When: Search for '!@#$%'
+2026-05-23 01:30:15,061 | INFO    |   ACTION: Submitted search query '!@#$%'
+2026-05-23 01:30:18,062 | INFO    | >>> Then: Page loaded without errors
+2026-05-23 01:30:18,075 | INFO    |   ACTION: Page body loaded
+2026-05-23 01:30:18,079 | INFO    |   ASSERT: Title: 'Buy Cosmetics Products & Beauty Products Online in India at Best Price | Nykaa'
+2026-05-23 01:30:18,266 | INFO    | === Scenario PASSED: Search with special characters does not crash ===
+2026-05-23 01:30:18,324 | INFO    |   ACTION: Browser closed
+2026-05-23 01:30:18,325 | INFO    | === Scenario: Sort by price Low to High ===
+2026-05-23 01:30:23,051 | INFO    |   ACTION: Browser started and Nykaa homepage loaded
+2026-05-23 01:30:23,052 | INFO    | >>> Given: Navigate to lipstick listing
