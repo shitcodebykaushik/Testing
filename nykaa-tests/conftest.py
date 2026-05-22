@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -32,7 +33,16 @@ def driver():
 def pytest_runtest_makereport(item, call):
     outcome = yield
     report = outcome.get_result()
-    if report.when == "call" and report.failed:
-        driver = item.funcargs.get("driver")
-        if driver:
-            take_screenshot(driver, f"{item.name}_failed")
+    if report.when == "call":
+        from pathlib import Path
+        log_dir = Path(__file__).parent / "logs"
+        if log_dir.exists():
+            log_files = sorted(log_dir.glob("*.log"), key=lambda f: f.stat().st_mtime, reverse=True)
+            if log_files:
+                latest = log_files[0]
+                with open(latest) as f:
+                    allure.attach(f.read(), name="test_log", attachment_type=allure.attachment_type.TEXT)
+        if report.failed:
+            driver = item.funcargs.get("driver")
+            if driver:
+                take_screenshot(driver, f"{item.name}_failed")
